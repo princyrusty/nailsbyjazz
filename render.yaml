@@ -1,0 +1,29 @@
+# Render Blueprint: one free web service.
+services:
+  - type: web
+    name: nailsbyjazz
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: nailsbyjazzy
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: WHATSAPP_NUMBER
+        value: "918439411560"
+      - key: INSTAGRAM
+        value: jassmakeover13
+      - key: PAYMENT_MODE
+        value: whatsapp
