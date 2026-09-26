@@ -224,6 +224,9 @@
       <label>Instagram username<input id="sInsta" value="${esc(s.instagram)}"></label>
       <label>Delivery time (days)<input id="sDays" value="${esc(s.deliveryDays)}" placeholder="5–6"></label>
       <label>Announcement bar text<input id="sAnn" value="${esc(s.announcement)}" maxlength="160"></label>
+      <label>Pinterest picks: paste one pin link per line (up to 40). They appear on the homepage with a "Recreate this for me" button.
+        <textarea id="sPins" rows="8" placeholder="https://in.pinterest.com/pin/1234567890/">${esc((s.pinterestPins || []).join('\n'))}</textarea></label>
+      <p class="fine">Open a pin on Pinterest, copy the link from the address bar (it contains /pin/) and paste it here.</p>
       <div><button class="btn btn-primary" type="submit">Save settings</button></div></form>`;
   }
 
@@ -279,7 +282,7 @@
     }
     if (f.id === 'editor') saveDesign(e);
     if (f.id === 'feeForm') saveSettings({ customizationFee: Number($('#fCustom').value), shippingFee: Number($('#fShip').value), recreateBasePrice: Number($('#fRecreate').value) }, 'Fees saved');
-    if (f.id === 'setForm') saveSettings({ whatsappNumber: $('#sWa').value, instagram: $('#sInsta').value, deliveryDays: $('#sDays').value, announcement: $('#sAnn').value }, 'Settings saved');
+    if (f.id === 'setForm') saveSettings({ whatsappNumber: $('#sWa').value, instagram: $('#sInsta').value, deliveryDays: $('#sDays').value, announcement: $('#sAnn').value, pinterestPins: $('#sPins').value.split(/\s+/).filter(Boolean) }, 'Settings saved');
     if (f.id === 'priceForm') {
       const changed = $$('[data-price].changed');
       try {

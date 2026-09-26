@@ -27,7 +27,7 @@
     }
     const prices = S.products.map((p) => p.price);
     if (prices.length) $('#priceRange').textContent = Math.min(...prices) === Math.max(...prices) ? rupee(prices[0]) : `₹${Math.min(...prices)}–${Math.max(...prices)}`;
-    renderShowcase(); renderFilters(); renderGrid(); renderSizeTable(); renderRecreate();
+    renderShowcase(); renderFilters(); renderGrid(); renderSizeTable(); renderRecreate(); renderPins();
     if (location.hash === '#cart') openCart();
   }
 
@@ -68,6 +68,20 @@
   }
   function renderSizeTable() {
     $('#sizeTable').innerHTML = Object.entries(SETS).map(([k, nums]) => `<tr><td>${k}</td>${nums.map((n) => `<td>${SIZE_MM[n]} mm<small>size ${n}</small></td>`).join('')}</tr>`).join('');
+  }
+
+  // ---------- pinterest picks (official Pinterest embeds) ----------
+  function renderPins() {
+    const pins = S.cfg.pinterestPins || [];
+    if (!pins.length) return;
+    $('#picks').hidden = false;
+    $('#pins').innerHTML = pins.map((u, i) => `<div class="pin reveal" style="--i:${i % 4}">
+      <a data-pin-do="embedPin" data-pin-width="medium" data-pin-terse="true" href="${esc(u)}"></a>
+      <button class="btn btn-primary btn-sm" type="button" data-recreate="${esc(u)}">Recreate this for me · ${rupee(recreatePrice())}</button></div>`).join('');
+    const s = document.createElement('script');
+    s.async = true; s.defer = true; s.src = 'https://assets.pinterest.com/js/pinit.js';
+    document.body.appendChild(s);
+    reveal($('#pins'));
   }
 
   // ---------- recreate ----------
@@ -270,6 +284,13 @@
     const d = t.dataset;
     if (d.filter) { S.filter = d.filter; renderFilters(); renderGrid(); }
     else if (d.open) openModal(d.open);
+    else if (d.recreate) {
+      e.preventDefault();
+      $('#rLink').value = d.recreate; $('#rErr').textContent = '';
+      $('#recreate').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => $('#rShape').focus({ preventScroll: true }), 600);
+      toast('Design link added. Choose your shape and length.');
+    }
     else if (d.img) { M.img = Number(d.img); renderGallery(); }
     else if (d.size && !t.disabled) { M.size = d.size; updateModal(); }
     else if (d.inc || d.dec) { const items = cart.items(); const it = items.find((x) => x.key === (d.inc || d.dec)); if (it) { it.qty = Math.max(1, Math.min(10, it.qty + (d.inc ? 1 : -1))); cart.save(items); renderDrawer(); } }
