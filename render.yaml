@@ -1,4 +1,11 @@
-# Render Blueprint: one free web service.
+# Render Blueprint: free web service + free PostgreSQL database, linked automatically.
+databases:
+  - name: nailsbyjazz-db
+    plan: free
+    region: singapore
+    databaseName: nailsbyjazz
+    user: nailsbyjazz
+
 services:
   - type: web
     name: nailsbyjazz
@@ -9,18 +16,20 @@ services:
     startCommand: node server.js
     healthCheckPath: /healthz
     envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nailsbyjazz-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_USERNAME
+        value: nailsbyjazzy
       - key: NODE_ENV
         value: production
       - key: NODE_VERSION
         value: "22"
-      - key: SESSION_SECRET
-        generateValue: true
-      - key: ADMIN_USERNAME
-        value: nailsbyjazzy
-      - key: ADMIN_PASSWORD
-        sync: false
-      - key: MONGODB_URI
-        sync: false
       - key: WHATSAPP_NUMBER
         value: "918439411560"
       - key: INSTAGRAM

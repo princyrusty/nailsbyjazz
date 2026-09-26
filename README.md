@@ -13,7 +13,7 @@ Online store for **Nails by Jazz** — handmade press-on nails by Jasveen Kaur, 
 ## Environment variables
 | Name | Purpose |
 |---|---|
-| `MONGODB_URI` | MongoDB Atlas connection string (required on Render so data survives restarts) |
+| `DATABASE_URL` | PostgreSQL connection string. On Render the Blueprint links the free database automatically. (`MONGODB_URI` is also supported.) |
 | `ADMIN_USERNAME` / `ADMIN_PASSWORD` | Admin login |
 | `SESSION_SECRET` | Random string that signs login cookies |
 | `WHATSAPP_NUMBER`, `INSTAGRAM` | First-run defaults (editable in Admin → Settings) |
@@ -25,8 +25,9 @@ npm install
 cp .env.example .env   # edit values
 npm start              # http://localhost:3000
 ```
-Without `MONGODB_URI`, data is stored in `data/store/*.json`.
+Without `DATABASE_URL`, data is stored in `data/store/*.json`.
 
 ## Deploy on Render (free)
-New → Web Service → connect this repo → Build `npm ci`, Start `node server.js`, Instance type Free → add the environment variables above.
-The free plan sleeps after 15 minutes without visitors; the first visit after that takes about a minute to load.
+New → Blueprint → this repo. `render.yaml` creates the free web service and a free PostgreSQL database and links them. Enter `ADMIN_PASSWORD` when asked.
+
+Free plan limits: the web service sleeps after 15 minutes without visitors (first visit then takes about a minute), and **Render's free database expires 30 days after it is created**. Upgrade the database to a paid plan before then to keep orders, accounts and photos.
