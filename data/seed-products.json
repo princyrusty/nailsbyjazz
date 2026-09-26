@@ -1,0 +1,241 @@
+[
+ {
+  "id": "gulabi-french",
+  "name": "Gulabi French",
+  "price": 650,
+  "shape": "Almond",
+  "length": "Medium",
+  "finish": "Glossy",
+  "pattern": "french",
+  "colors": [
+   "#F4C9CF",
+   "#FFFFFF"
+  ],
+  "description": "Soft rose base with a crisp white French tip. The everyday set that goes with every outfit.",
+  "tags": [
+   "bestseller",
+   "everyday"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "mehendi-night",
+  "name": "Mehendi Night",
+  "price": 800,
+  "shape": "Coffin",
+  "length": "Long",
+  "finish": "Glossy",
+  "pattern": "floral",
+  "colors": [
+   "#7A1F3D",
+   "#D9A94E"
+  ],
+  "description": "Deep maroon with hand-painted gold floral detailing. Made for sangeet and wedding functions.",
+  "tags": [
+   "bridal",
+   "festive"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "chai-latte",
+  "name": "Strawberry Milk",
+  "price": 600,
+  "shape": "Square",
+  "length": "Short",
+  "finish": "Matte",
+  "pattern": "solid",
+  "colors": [
+   "#F9C5D5",
+   "#F9C5D5"
+  ],
+  "description": "Soft strawberry-milk pink in a velvety matte. Office-friendly and easy to wear all week.",
+  "tags": [
+   "everyday"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "golden-hour-chrome",
+  "name": "Golden Hour Chrome",
+  "price": 750,
+  "shape": "Almond",
+  "length": "Medium",
+  "finish": "Chrome",
+  "pattern": "chrome",
+  "colors": [
+   "#E8C98A",
+   "#FFF4DA"
+  ],
+  "description": "Mirror-finish champagne chrome that catches every bit of light.",
+  "tags": [
+   "party",
+   "bestseller"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "lavender-haze",
+  "name": "Lavender Haze",
+  "price": 700,
+  "shape": "Oval",
+  "length": "Short",
+  "finish": "Glossy",
+  "pattern": "ombre",
+  "colors": [
+   "#E7DDF5",
+   "#A98BD4"
+  ],
+  "description": "Lilac-to-lavender ombré. Soft, dreamy, and very photogenic.",
+  "tags": [
+   "everyday"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "shaadi-sparkle",
+  "name": "Shaadi Sparkle",
+  "price": 800,
+  "shape": "Stiletto",
+  "length": "Long",
+  "finish": "Glitter",
+  "pattern": "glitter",
+  "colors": [
+   "#B3123A",
+   "#F5D27A"
+  ],
+  "description": "Bridal red with a gold glitter cascade. Statement nails for the big day.",
+  "tags": [
+   "bridal",
+   "festive"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "marble-chic",
+  "name": "Marble Chic",
+  "price": 720,
+  "shape": "Coffin",
+  "length": "Medium",
+  "finish": "Glossy",
+  "pattern": "marble",
+  "colors": [
+   "#F7F4F2",
+   "#8E8A8C"
+  ],
+  "description": "White and grey marble veins with a thin gold accent line.",
+  "tags": [
+   "party"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "cat-eye-emerald",
+  "name": "Cat-Eye Emerald",
+  "price": 780,
+  "shape": "Almond",
+  "length": "Long",
+  "finish": "Cat-eye",
+  "pattern": "cateye",
+  "colors": [
+   "#0F4D3F",
+   "#7FE0B8"
+  ],
+  "description": "Magnetic cat-eye in deep emerald with a shifting light band.",
+  "tags": [
+   "party",
+   "new"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "nude-basics",
+  "name": "Ballet Slipper",
+  "price": 600,
+  "shape": "Oval",
+  "length": "Short",
+  "finish": "Glossy",
+  "pattern": "solid",
+  "colors": [
+   "#F6D3D9",
+   "#F6D3D9"
+  ],
+  "description": "A sheer ballet-pink for a clean, natural look. A great first set.",
+  "tags": [
+   "everyday",
+   "bestseller"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "holi-pop",
+  "name": "Holi Pop",
+  "price": 680,
+  "shape": "Square",
+  "length": "Medium",
+  "finish": "Glossy",
+  "pattern": "multi",
+  "colors": [
+   "#FF6FA3",
+   "#FFC83D",
+   "#39C0A8",
+   "#7A6CF0",
+   "#FF8A3D"
+  ],
+  "description": "Five fun colours, one per finger. Bright and cheerful.",
+  "tags": [
+   "festive",
+   "new"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "midnight-velvet",
+  "name": "Midnight Velvet",
+  "price": 740,
+  "shape": "Stiletto",
+  "length": "Medium",
+  "finish": "Velvet",
+  "pattern": "cateye",
+  "colors": [
+   "#1D1B3A",
+   "#8C7BFF"
+  ],
+  "description": "Navy velvet shimmer with a soft violet glow.",
+  "tags": [
+   "party"
+  ],
+  "inStock": true,
+  "image": ""
+ },
+ {
+  "id": "baby-boomer",
+  "name": "Baby Boomer",
+  "price": 690,
+  "shape": "Almond",
+  "length": "Medium",
+  "finish": "Glossy",
+  "pattern": "ombre",
+  "colors": [
+   "#FFFFFF",
+   "#F2B8BE"
+  ],
+  "description": "Seamless pink-to-white fade. Timeless and elegant.",
+  "tags": [
+   "everyday",
+   "bridal"
+  ],
+  "inStock": true,
+  "image": ""
+ }
+]
