@@ -27,7 +27,22 @@ const DEFAULT_SETTINGS = {
   deliveryDays: '5–6',
   recreateBasePrice: 700,
   announcement: 'Pan-India home delivery · ₹99 shipping · Delivered in 5–6 days',
+  pinterestPins: [
+    'https://in.pinterest.com/pin/4292562141585009/',
+    'https://in.pinterest.com/pin/55169164192025443/',
+    'https://in.pinterest.com/pin/4609223212192349824/',
+    'https://in.pinterest.com/pin/14566398794050117/',
+    'https://in.pinterest.com/pin/172333123236659553/',
+    'https://in.pinterest.com/pin/1618549865456355/',
+    'https://in.pinterest.com/pin/4604930746735375488/',
+    'https://in.pinterest.com/pin/351912467599944/',
+    'https://in.pinterest.com/pin/4594093950163129728/',
+    'https://in.pinterest.com/pin/1124211125773583848/',
+    'https://in.pinterest.com/pin/563018699896585/',
+    'https://in.pinterest.com/pin/20266267069660442/',
+  ],
 };
+const PIN_RE = /^https:\/\/((www|[a-z]{2})\.)?pinterest\.[a-z.]{2,6}\/pin\/[\w-]+\/?$|^https:\/\/pin\.it\/[\w]+\/?$/i;
 const STANDARD_SIZES = ['XS', 'S', 'M', 'L'];
 const SHAPES = ['Almond', 'Coffin', 'Square', 'Oval', 'Stiletto'];
 const LENGTHS = ['Short', 'Medium', 'Long'];
@@ -104,6 +119,7 @@ async function main() {
       whatsappNumber: settings.whatsappNumber, instagram: settings.instagram,
       customizationFee: settings.customizationFee, shippingFee: settings.shippingFee, deliveryDays: settings.deliveryDays,
       recreateBasePrice: settings.recreateBasePrice, announcement: settings.announcement,
+      pinterestPins: settings.pinterestPins || [],
       standardSizes: STANDARD_SIZES, shapes: SHAPES, lengths: LENGTHS,
       paymentMode: onlinePayments() ? 'razorpay' : 'whatsapp',
     });
@@ -372,6 +388,9 @@ async function main() {
       recreateBasePrice: num(b.recreateBasePrice, settings.recreateBasePrice),
       deliveryDays: clean(b.deliveryDays ?? settings.deliveryDays, 20) || settings.deliveryDays,
       announcement: clean(b.announcement ?? settings.announcement, 160),
+      pinterestPins: Array.isArray(b.pinterestPins)
+        ? [...new Set(b.pinterestPins.map((u) => clean(u, 200).split('?')[0]).filter((u) => PIN_RE.test(u)))].slice(0, 40)
+        : settings.pinterestPins || [],
     };
     settings = { ...settings, ...(await db.update('settings', 'site', patch)) };
     res.json(settings);
