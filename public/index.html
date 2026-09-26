@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nails by Jazz · Press-on Nails, Meerut</title>
+<meta name="description" content="Handmade press-on nails by Jasveen Kaur in Meerut. Sets from ₹600, custom fit and designs, pan-India home delivery for ₹99 in 5–6 days. Order on WhatsApp.">
+<meta name="theme-color" content="#D23A6E">
+<meta property="og:title" content="Nails by Jazz · Handmade press-on nails">
+<meta property="og:description" content="Salon-quality press-on nails, handmade in Meerut. Pan-India delivery in 5–6 days.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23D23A6E'/%3E%3Cpath d='M24 50V26c0-8 4-14 8-14s8 6 8 14v24z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300..600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<div class="ribbon" aria-label="Announcement"><div class="ribbon-track" id="ribbonTrack"><span>Pan-India home delivery · ₹99 shipping · Delivered in 5–6 days</span></div></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Nails by Jazz home"><small>Nails by</small><b>Jazz</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#shop">Shop</a><a href="#recreate">Recreate a design</a><a href="#sizing">Sizing</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="pill-btn" href="/account" data-icon="user"><span class="lbl" data-account-label>Log in</span></a>
+      <button class="pill-btn" id="openCart" type="button" aria-label="Open cart" data-icon="bag"><span class="lbl">Cart</span> <span class="cart-count num">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow fade-in">Handmade press-ons · Meerut, UP</p>
+        <h1><span class="rise">Salon&nbsp;nails,</span><br><span class="rise">pressed&nbsp;on</span> <span class="rise">by</span> <span class="rise script">Jazz</span></h1>
+        <p class="lede fade-in">Reusable press-on nail sets, hand-painted by Jasveen Kaur. Pick a design or send one you love, choose your size, and we deliver to your door anywhere in India.</p>
+        <div class="hero-actions fade-in">
+          <a class="btn btn-primary" href="#shop">Shop designs</a>
+          <a class="btn btn-ghost" href="#recreate">Recreate my design</a>
+        </div>
+        <div class="hero-facts fade-in">
+          <div><b class="num" id="priceRange">₹600–800</b><span>per set of 10 nails</span></div>
+          <div><b class="num" data-ship>₹99</b><span>shipping, pan-India</span></div>
+          <div><b class="num"><span data-days>5–6</span> days</b><span>to your doorstep</span></div>
+        </div>
+      </div>
+      <div class="showcase" id="showcase" aria-label="Featured designs">
+        <span class="sparkle s1" data-icon="sparkle"></span><span class="sparkle s2" data-icon="sparkle"></span><span class="sparkle s3" data-icon="sparkle"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="perks">
+    <div class="wrap">
+      <div class="perk reveal"><i data-icon="truck"></i><div><b>Home delivery</b><span>Anywhere in India</span></div></div>
+      <div class="perk reveal" style="--i:1"><i data-icon="bag"></i><div><b><span data-ship>₹99</span> flat shipping</b><span>On every order</span></div></div>
+      <div class="perk reveal" style="--i:2"><i data-icon="clock"></i><div><b>Delivered in <span data-days>5–6</span> days</b><span>Handmade to order</span></div></div>
+      <div class="perk reveal" style="--i:3"><i data-icon="brush"></i><div><b>Custom designs</b><span><span data-fee>₹100</span> extra</span></div></div>
+    </div>
+  </div>
+
+  <section class="section" id="shop">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">The collection</p><h2>Press-on <em>sets</em></h2></div>
+        <p>Every set comes with 10 nails, glue, adhesive tabs, a mini file and a cuticle stick.</p>
+      </div>
+      <div class="filters reveal">
+        <div class="chips" id="chips" role="group" aria-label="Filter by collection"></div>
+        <div class="selects">
+          <select id="shapeFilter" aria-label="Filter by shape"><option value="">All shapes</option></select>
+          <select id="sortBy" aria-label="Sort">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="grid" aria-live="polite">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="recreate">
+    <div class="wrap">
+      <div class="recreate reveal">
+        <div>
+          <p class="eyebrow">Saw a design you love?</p>
+          <h2>We'll recreate it for you</h2>
+          <p class="muted">Found nails on Pinterest or Instagram? Paste the link and Jazz will hand-paint that design in your size.</p>
+          <ol>
+            <li>Paste the link to the design (or send the photo on WhatsApp later).</li>
+            <li>Choose the shape and length.</li>
+            <li>Add to cart and check out. Jazz confirms the details on WhatsApp.</li>
+          </ol>
+        </div>
+        <form class="form" id="recreateForm" novalidate>
+          <label>Link to the design<input id="rLink" type="url" inputmode="url" placeholder="https://in.pinterest.com/pin/…"></label>
+          <div class="row2">
+            <label>Shape<select id="rShape"></select></label>
+            <label>Length<select id="rLength"></select></label>
+          </div>
+          <label>Notes (colours, changes, occasion)<textarea id="rNotes" rows="2" placeholder="e.g. same design but in baby pink, for my sister's wedding"></textarea></label>
+          <label>Your nail widths in mm (optional)<input id="rSizes" placeholder="Thumb 16, Index 12, Middle 13, Ring 12, Pinky 10"></label>
+          <p class="errors" id="rErr"></p>
+          <div class="buy-row"><span class="price num" id="rPrice">₹800</span><button class="btn btn-primary" type="submit" style="flex:1">Add to cart</button></div>
+          <p class="fine">Includes custom sizing and design (<span data-fee>₹100</span>). Very detailed art may cost a little more. Jazz will tell you before you pay.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint" id="sizing">
+    <div class="wrap sizing">
+      <div class="reveal">
+        <p class="eyebrow">Sizing guide</p>
+        <h2 style="font-size:clamp(34px,4.6vw,52px);margin-top:6px">Find your fit</h2>
+        <ol>
+          <li>Stick clear tape across the widest part of each nail.</li>
+          <li>Mark both edges with a pen, peel it off and measure in millimetres.</li>
+          <li>Match your sizes to the chart. Between two sizes? Pick the larger one and file it down.</li>
+        </ol>
+        <p class="fine" style="margin-top:14px">Not sure? Choose <b>Custom fit</b> (<span data-fee>₹100</span>) and send your 10 measurements. Jazz matches each nail for you.</p>
+      </div>
+      <div class="table-scroll reveal" style="--i:1">
+        <table class="size-table">
+          <thead><tr><th>Set</th><th>Thumb</th><th>Index</th><th>Middle</th><th>Ring</th><th>Pinky</th></tr></thead>
+          <tbody id="sizeTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="monogram reveal" aria-hidden="true"><span>Jazz</span></div>
+      <div class="reveal" style="--i:1">
+        <p class="eyebrow">Meet the artist</p>
+        <h2>Hi, I'm Jasveen Kaur</h2>
+        <p>I'm a nail technician from Meerut, and Jazz is what my clients call me. I started making press-on sets for friends who wanted salon nails for weddings and college events without spending hours in a salon chair. Every set is shaped, painted and sealed by hand.</p>
+        <p>Bridal and festive orders are my favourite. Send me your outfit photo on WhatsApp and I'll design a set to match.</p>
+        <a class="btn btn-ghost insta" data-insta-link href="https://instagram.com/jassmakeover13" target="_blank" rel="noopener" data-icon="insta"><span data-insta>@jassmakeover13</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal"><div><p class="eyebrow">Questions</p><h2>Good to <em>know</em></h2></div></div>
+      <div class="faq">
+        <details class="reveal"><summary>How long does delivery take, and what does it cost?</summary><p>We deliver to your home anywhere in India. Shipping is a flat <span data-ship>₹99</span> per order, and your nails arrive in <span data-days>5–6</span> days.</p></details>
+        <details class="reveal"><summary>How long do press-on nails last?</summary><p>With glue, 1–2 weeks. With adhesive tabs, 1–3 days, which is ideal for a single function. Removed gently, a set can be worn again 3–5 times.</p></details>
+        <details class="reveal"><summary>What does the custom fee include?</summary><p>Custom sizing for each of your 10 nails, plus design changes such as a different base colour, initials, or matching an outfit. It's also what we charge to recreate a design you send us.</p></details>
+        <details class="reveal"><summary>How do I pay?</summary><p>Place your order here and it opens on WhatsApp. Jazz confirms it and shares UPI details (GPay, PhonePe, Paytm). Direct online payment on the website is coming soon.</p></details>
+        <details class="reveal"><summary>Can I track my order?</summary><p>Yes. Create an account before you check out, and your order status and tracking number appear in <a href="/account">My account</a>.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-col"><a class="brand" href="/"><small>Nails by</small><b>Jazz</b></a><span>Handmade press-on nails by Jasveen Kaur<br>Meerut, Uttar Pradesh</span></div>
+    <div class="foot-col"><h4>Order &amp; questions</h4><span>WhatsApp: <a data-wa-link href="https://wa.me/918439411560" target="_blank" rel="noopener" data-wa-number>+91 84394 11560</a></span><span>Instagram: <a data-insta-link href="https://instagram.com/jassmakeover13" target="_blank" rel="noopener" data-insta>@jassmakeover13</a></span></div>
+    <div class="foot-col"><h4>Delivery</h4><span>Pan-India home delivery</span><span><span data-ship>₹99</span> shipping · <span data-days>5–6</span> days</span></div>
+    <div class="foot-col"><h4>Account</h4><a href="/account">My orders &amp; profile</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa-link href="https://wa.me/918439411560" target="_blank" rel="noopener" aria-label="Chat with Jazz on WhatsApp" data-icon="wa"></a>
+<div class="scrim" id="scrim"></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mName" aria-hidden="true">
+  <div class="modal-card">
+    <button class="icon-btn modal-close" type="button" id="closeModal" aria-label="Close">×</button>
+    <div class="gallery"><div class="gallery-main" id="mMain"></div><div class="thumbs" id="mThumbs"></div></div>
+    <div class="modal-info">
+      <div><p class="eyebrow" id="mEyebrow"></p><h2 id="mName"></h2></div>
+      <p class="muted" id="mDesc"></p>
+      <div class="specs" id="mSpecs"></div>
+      <div><p class="fine" style="margin-bottom:6px">Standard size (see the <a href="#sizing" data-close-modal>sizing guide</a>)</p><div class="size-row" id="mSizes" role="group" aria-label="Choose size"></div></div>
+      <label class="custom-toggle" for="mCustom">
+        <input type="checkbox" id="mCustom">
+        <span><b>Custom fit &amp; design</b> <span class="num" data-fee>+₹100</span><small>Made to your exact nail sizes, with small design changes.</small></span>
+      </label>
+      <div id="mCustomFields" hidden class="form">
+        <div>
+          <p class="fine" style="margin-bottom:6px">Nail widths in mm (optional, you can also send them on WhatsApp)</p>
+          <div class="fingers">
+            <label>Thumb<input id="fThumb" inputmode="decimal" placeholder="16"></label>
+            <label>Index<input id="fIndex" inputmode="decimal" placeholder="12"></label>
+            <label>Middle<input id="fMiddle" inputmode="decimal" placeholder="13"></label>
+            <label>Ring<input id="fRing" inputmode="decimal" placeholder="12"></label>
+            <label>Pinky<input id="fPinky" inputmode="decimal" placeholder="10"></label>
+          </div>
+        </div>
+        <label>Design changes<textarea id="mNotes" rows="2" placeholder="e.g. initials 'A+R' on the ring finger, nude base"></textarea></label>
+      </div>
+      <div class="buy-row">
+        <span class="price" id="mPrice"></span>
+        <div class="qty" aria-label="Quantity"><button type="button" id="mMinus" aria-label="Fewer">−</button><span id="mQty">1</span><button type="button" id="mPlus" aria-label="More">+</button></div>
+        <button class="btn btn-primary" type="button" id="mAdd" style="flex:1">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-head"><h2 id="drawerTitle">Your cart</h2><button class="icon-btn" type="button" id="closeCart" aria-label="Close cart">×</button></div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</aside>
+
+<script src="/js/common.js"></script>
+<script src="/js/nail-art.js"></script>
+<script src="/js/shop.js"></script>
+</body>
+</html>
