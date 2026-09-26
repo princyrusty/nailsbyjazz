@@ -1,11 +1,4 @@
-# Render Blueprint: free web service + free PostgreSQL database, linked automatically.
-databases:
-  - name: nailsbyjazz-db
-    plan: free
-    region: singapore
-    databaseName: nailsbyjazz
-    user: nailsbyjazz
-
+# Render Blueprint: one free web service. Data is stored in MongoDB Atlas (free forever).
 services:
   - type: web
     name: nailsbyjazz
@@ -16,10 +9,8 @@ services:
     startCommand: node server.js
     healthCheckPath: /healthz
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: nailsbyjazz-db
-          property: connectionString
+      - key: MONGODB_URI
+        sync: false
       - key: SESSION_SECRET
         generateValue: true
       - key: ADMIN_PASSWORD
